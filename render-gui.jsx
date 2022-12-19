@@ -23,7 +23,7 @@ function Home(props) {
 function Blog(props) {
     return (
         <div>
-            <p>未开发完成</p>
+            <a href="blog/1.html">1:test</a><br />
         </div>
     );
 }
