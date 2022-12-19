@@ -27,17 +27,30 @@ function Blog(props) {
         </div>
     );
 }
+//存储库
+function Repo(props) {
+    return (
+        <div>
+            <p>未开发完成</p>
+        </div>
+    );
+}
 //404
 function NotFound(props) {
     return (
-        <p>404 Not Found</p>
+        <div>
+            <h1>404 Not Found</h1>
+            <p>找啥呢</p>
+        </div>
     )
 }
 //主体文字
 function Text(props) {
     return (
         <div>
-            {location.hash=='#/home'?(<Home />):(location.hash=='#/blog'?<Blog />:<NotFound />)}
+            {location.hash=='#/home'?(<Home />):
+                (location.hash=='#/blog'?<Blog />:
+                (location.hash=='#/repo'?<Repo />:<NotFound />))}
         </div>
     );
 }
