@@ -23,6 +23,7 @@ function Home(props) {
 function Blog(props) {
     return (
         <div>
+            <a className="blogSub" href="blog/2.html">新博客系统正式开始使用啦</a><br />
             <a className="blogSub" href="blog/1.html">test</a><br />
         </div>
     );
