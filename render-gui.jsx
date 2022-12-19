@@ -1,3 +1,4 @@
+//导航栏
 function Nav(props) {
     return (
         <div>
@@ -9,34 +10,26 @@ function Nav(props) {
         </div>
     );
 }
-// function Text(props) {
-//     return (
-//         () => {
-//             switch(location.hash) {
-//                 case '#/home':
-//                     (<div><h1>这里是HelloWorld的新博客网站</h1><p>本站使用React框架编写,我也是才学React,高手请多多指教</p></div>);
-//                     break;
-//                 case '#/blog':
-//                     (<div><h1>博客暂未研发完成</h1></div>);
-//                     break;
-//                 default:
-//                     (<p>404 Not Found</p>);
-//                     break;
-//             }
-//         }
-//     );
-// }
+//主页
+function Home(props) {
+    return (
+        <div>
+            <h1>这里是HelloWorld的新博客网站</h1>
+            <p>本站使用React框架编写,我也是才学React,高手请多多指教</p>
+        </div>
+    );
+}
+//404
+function NotFound(props) {
+    return (
+        <p>404 Not Found</p>
+    )
+}
+//主体文字
 function Text(props) {
     return (
         <div>
-            {location.hash=='#/home'?(
-                <div>
-                    <h1>这里是HelloWorld的新博客网站</h1>
-                    <p>本站使用React框架编写,我也是才学React,高手请多多指教</p>
-                </div>
-            ):(
-                <p>404 Not Found</p>
-            )}
+            {location.hash=='#/home'?(<Home />):(<NotFound />)};
         </div>
     );
 }
