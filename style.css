@@ -15,7 +15,7 @@ a.blogSub {
     float: left;
     padding: 5px;
     height: 20px;
-    width: 100%;
+    /* width: 100%; */
     margin:2px;
     border: 2px solid gray;
 }
