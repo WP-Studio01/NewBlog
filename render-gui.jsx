@@ -23,7 +23,7 @@ function Home(props) {
 function Blog(props) {
     return (
         <div>
-            <a className="blogSub" href="blog/1.html">1:test</a><br />
+            <a className="blogSub" href="blog/1.html">test</a><br />
         </div>
     );
 }
