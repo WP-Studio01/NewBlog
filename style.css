@@ -12,7 +12,7 @@ a.blogSub {
     text-decoration: none;
     color: blue;
     font-size: 20px;
-    /* float: left; */
+    float: left;
     padding: 5px;
     height: 20px;
     width: 98%;
