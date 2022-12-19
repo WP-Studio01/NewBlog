@@ -3,7 +3,7 @@ function Nav(props) {
         <div>
             <a className="navitem" href="#/home">主页</a>
             <a className="navitem" href="#/blog">博客</a>
-            <a className="navitem github" href="?">Github</a>
+            <a className="navitem github" href="https://github.com/WP-Studio01/NewBlog">Github</a>
         </div>
     );
 }
