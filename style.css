@@ -1,0 +1,10 @@
+.navitem {
+    padding: 5px;
+    border: solid gray 2px;
+    margin: 2px;
+    text-decoration: none;
+    color: blue;
+}
+.github {
+    float: right;
+}
