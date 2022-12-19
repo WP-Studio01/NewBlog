@@ -29,7 +29,7 @@ function NotFound(props) {
 function Text(props) {
     return (
         <div>
-            {location.hash=='#/home'?(<Home />):(<NotFound />)};
+            {location.hash=='#/home'?(<Home />):(<NotFound />)}
         </div>
     );
 }
