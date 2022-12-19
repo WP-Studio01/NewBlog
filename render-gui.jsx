@@ -16,6 +16,8 @@ function Home(props) {
         <div>
             <h1>这里是HelloWorld的新博客网站</h1>
             <p>本站使用React框架编写,我也是才学React,高手请多多指教</p>
+            <p>我的博客被<img src="https://saobby.pythonanywhere.com/api/webcounter?id=bcbcj76C3lXbkRYu" />次访问过</p>
+            /*token:TIkE6uc2X5HwWvZNXRD2DtiAK62RfdU3YAKboND31kx95lLkO3zKUgOhNR5hh4u8*/
         </div>
     );
 }
