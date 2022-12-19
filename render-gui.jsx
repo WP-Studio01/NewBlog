@@ -19,6 +19,14 @@ function Home(props) {
         </div>
     );
 }
+//博客
+function Blog(props) {
+    return (
+        <div>
+            <p>未开发完成</p>
+        </div>
+    );
+}
 //404
 function NotFound(props) {
     return (
@@ -29,7 +37,7 @@ function NotFound(props) {
 function Text(props) {
     return (
         <div>
-            {location.hash=='#/home'?(<Home />):(<NotFound />)}
+            {location.hash=='#/home'?(<Home />):(location.hash=='#/blog'?<Blog />:<NotFound />)}
         </div>
     );
 }
