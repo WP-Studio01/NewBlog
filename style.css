@@ -8,3 +8,8 @@
 .github {
     float: right;
 }
+a.blogSub {
+    text-decoration: none;
+    color: blue;
+    font-size: 20px;
+}
