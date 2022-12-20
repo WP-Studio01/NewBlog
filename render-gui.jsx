@@ -13,9 +13,9 @@ function Home(props) {
 function Blog(props) {
     return (
         <div>
-            <a className="blogSub" href="blog/?id=4">正式使用Github Issue作为博客载体</a><br />
-            <a className="blogSub" href="blog/?id=3">新博客系统正式开始使用啦</a><br />
-            <a className="blogSub" href="blog/?id=2">test</a><br />
+            <a className="blogSub" href="/blog/?id=4">正式使用Github Issue作为博客载体</a><br />
+            <a className="blogSub" href="/blog/?id=3">新博客系统正式开始使用啦</a><br />
+            <a className="blogSub" href="/blog/?id=2">test</a><br />
         </div>
     );
 }
