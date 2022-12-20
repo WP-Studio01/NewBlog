@@ -7,10 +7,12 @@
         <title>Loading...</title>
         <script>
             function getQueryString(name) {
-                var querystr=location.search;
+                var querystr=location.search.substr(1);
                 var o=querystr.split('&');
+                // console.log(o);
                 for(var i in o) {
-                    var t=i.split('=');
+                    var t=o[i].split('=');
+                    // console.log(i);
                     if(t[0]==name) {
                         return t[1];
                     }
@@ -24,17 +26,19 @@
         <script>
             var id=getQueryString('id');
             if(id!='') {
-                $.get('https://api.github.com/repos/NewBlog/issue/'+id,function(data,status){
-                    if(status==200) {
-                        var json=JSON.parse(data);
-                        var s='';
-                        s+='<h1>';
-                        s+=json.title;
-                        s+='</h1>';
-                        s+=marked.parse(json.body);
-                        document.getElementById('content').innerHTML=s;
-                    }
-                })
+                $.get('https://api.github.com/repos/WP-Studio01/NewBlog/issues/'+id,function(data,status){
+                    console.log(data);
+                    var json=(data);
+                    document.title=json.title;
+                    var s='';
+                    s+='<h1>';
+                    s+=json.title;
+                    s+='</h1>';
+                    s+=marked.parse(json.body);
+                    document.getElementById('content').innerHTML=s;
+                });
+            } else {
+                console.error('id not found');
             }
         </script>
     </body>
