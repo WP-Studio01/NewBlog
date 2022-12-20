@@ -9,6 +9,6 @@ document.addEventListener('visibilitychange', function(){
         document.title = '终于回来';  
         titleTime = setTimeout(function() {  
             document.title = window.OriginTitile;  
-        }, 3000); // 6秒后恢复原标题  
+        }, 500); // 恢复原标题  
     }  
 });  
