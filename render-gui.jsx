@@ -39,13 +39,25 @@ function NotFound(props) {
 }
 //主体文字
 function Text(props) {
-    return (
-        <div>
-            {location.hash=='#/home'?(<Home />):
-                (location.hash=='#/blog'?<Blog />:
-                (location.hash=='#/repo'?<Repo />:<NotFound />))}
-        </div>
-    );
+    switch(location.hash) {
+        case '#/home':
+            return <Home />
+        case '#/blog':
+            return <Blog />;
+        case '#/repo':
+            return <Repo />;
+        case '#/code':
+            return <NotFound />;
+        default:
+            return <NotFound />;
+    }
+    // return (
+    //     <div>
+    //         {location.hash=='#/home'?():
+    //             (location.hash=='#/blog'?:
+    //             (location.hash=='#/repo'?<Repo />:<NotFound />))}
+    //     </div>
+    // );
 }
 (window.onhashchange=function() {
     if(location.hash=='') {
