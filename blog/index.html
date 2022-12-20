@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://cdn.staticfile.org/marked/4.2.4/marked.min.js"></script>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <title>Loading...</title>
+        <script>
+            function getQueryString(name) {
+                var querystr=location.search;
+                var o=querystr.split('&');
+                for(var i in o) {
+                    var t=i.split('=');
+                    if(t[0]==name) {
+                        return t[1];
+                    }
+                }
+                return '';
+            }
+        </script>
+    </head>
+    <body>
+        <div id="content"></div>
+        <script>
+            var id=getQueryString('id');
+            if(id!='') {
+                $.get('https://api.github.com/repos/NewBlog/issue/'+id,function(data,status){
+                    if(status==200) {
+                        var json=JSON.parse(data);
+                        var s='';
+                        s+='<h1>';
+                        s+=json.title;
+                        s+='</h1>';
+                        s+=marked.parse(json.body);
+                        document.getElementById('content').innerHTML=s;
+                    }
+                })
+            }
+        </script>
+    </body>
+</html>
